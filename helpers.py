@@ -8,7 +8,7 @@ def random_element(a):
 def get_comment():
     n = randint(1, 4)
 
-    attributes = ["cool", "kool", "nice", "GREAT", "awesome", "gorgeous", "good", "super"]
+    attributes = ["cool", "kool", "nice", "GREAT", "an awesome", "gorgeous", "so good", "super"]
     photos = ["photo", "pic", "photography", "picture", "work", "job"]
     suffixes = ["", ":)", ":" + n * ")", ":" + n * "D", n * "he", n * "!", "...", ".", "lol", "he he"]
     pronouns = ["that's", "this is", "it's", "that is", "it is"]
@@ -20,4 +20,4 @@ def get_comment():
     photo = random_element(photos)
     suffix = random_element(suffixes)
 
-    return "{} {} a {} {} {}".format(prefix, pronoun, attribute, photo, suffix)
+    return "{} {} {} {} {}".format(prefix, pronoun, attribute, photo, suffix)
