@@ -7,9 +7,11 @@ from constants import user, pwd
 
 # import pandas as pd
 
-
 def get_comment_box():
     return web.find_element_by_css_selector('textarea')
+
+def probability(p):
+    return randint(1, 100) < p
 
 
 # chromedriver_path = 'C:\\chromedriver.exe' # Change this to your own chromedriver path!
@@ -31,9 +33,9 @@ sleep(randint(3, 6))
 # notnow = web.find_element_by_css_selector("[role='dialog']")
 # notnow.click()
 
-hashtags = ['fashionvideos', 'modeling', 'gaymodel', 'malemodel', 'malemodels', 'fashion', 'fashionbeauty',
-            'fashionphotography', 'belgrade', 'fashionvideos', 'fashionmovies', 'visualart', 'portrait', 'people',
-            'model', 'fashionmodel', 'gayvid', 'gaymovie', 'fashionbeauty']
+hashtags = ['fashionvideos', 'modeling', 'femalemodel', 'femalemodels', 'fashion', 'fashionbeauty', 'bauty', 'makeup', 'beautymakeup',
+            'fashionphotography', 'belgrade', 'fashionvideos', 'fashionmovies', 'visualart', 'portrait', 'people', 'professional',
+            'behindthescenes', 'model', 'fashionmodel', 'fashionbeauty', 'modelagency', 'belgradeportraits']
 shuffle(hashtags)
 
 for hashtag in hashtags:
@@ -47,23 +49,35 @@ for hashtag in hashtags:
 
     # How many photos for this hashtag you want to interact with?
     for x in range(1, randint(12, 50)):
-        if randint(1, 2) < 2:
-            # Liking the picture
-            empty_hearts = web.find_elements_by_css_selector('article [aria-label="Like"]')
+        empty_hearts = web.find_elements_by_css_selector('article [aria-label="Like"]')
 
+        # Photo like
+        if probability(45) and empty_hearts:
+            # Liking the photo
+            empty_hearts[0].click()
+
+        # Comment likes
+        if probability(80) and empty_hearts:
+            empty_hearts.pop(0)
             for btn in empty_hearts:
-                if randint(1, 100) <= 40:
+                if probability(30):
                     btn.click()
                     sleep(randint(2, 5))
-        else:
-            if randint(1, 100) < 40:
-                comment = get_comment()
+
+        # Commenting the photo
+        if probability(27):
+            sleep(randint(3, 6))
+            try:
+                # comment = get_comment()
+                # if get_comment_box():
                 get_comment_box().click()
-                sleep(randint(2, 4))
-                get_comment_box().send_keys(comment)
+                sleep(randint(1, 3))
+                get_comment_box().send_keys(get_comment())
                 sleep(randint(2, 5))
                 web.find_element_by_css_selector('button[type="submit"]').click()
-                sleep(randint(3, 5))
+                sleep(randint(4, 6))
+            except:
+                print("ElementNotInteractableException")
 
         web.find_element_by_xpath('/html/body').send_keys(Keys.RIGHT)
         sleep(randint(2, 6))
