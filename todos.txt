@@ -1,0 +1,19 @@
+check for the "couldn't post comment" error 
+swipe to see more images inside post (added randomness)
+https://instazood.com/blog/instagram-rules-restrictions-and-limits/)
+Comments on this post have been limited.
+Element not interactable (keeps spinning - didn't load the photo)
+
+add time elapsed since last comment - pa onda preko razlike da li treba komentarisati ili ne...
+
+provera da li već postoji moj komentar
+
+add emojis - https://www.instagram.com/maja_miletic/?hl=sr 
+https://www.instagram.com/p/B0AoDN6lmFF/
+https://prnt.sc/qwd28q
+
+Geo targeting(Beograd, Srbija, Makedonija, skopje)
+
+Follow/unfollow pomoću fajla
+
+post from fanpage account (lowers the risk of a ban)

@@ -1,4 +1,9 @@
 # Instagram bot
+Playing around and learning. Making it public so others can learn, too.
+The code is provided as is. I hold no responsibility for its usage. Have fun!
+
+## Instructions (english + srpski = srbish)
+
 https://towardsdatascience.com/increase-your-instagram-followers-with-a-simple-python-bot-fde048dce20d
 
 1. get Python 3.7
@@ -10,6 +15,7 @@ https://towardsdatascience.com/increase-your-instagram-followers-with-a-simple-p
     3. run "sudo python /path/to/get-pip.py" (change the actual path)
 (run “sudo pip install selenium")
 4. get Chromedriver (za odgovarajuću instaliranu verziju Chrome-a)
+5. remove `example` from `constants.example.py` and add your values (username/password)
 
 
 2 scripts:
@@ -18,3 +24,4 @@ run.py
 
 
 Check https://www.androidtipster.com/instagram-limits/
+Check todos.txt for potential improvements.

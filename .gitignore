@@ -1,3 +1,4 @@
 test.py
 .idea
-constants.*
+constants.py
+constants.pyc
